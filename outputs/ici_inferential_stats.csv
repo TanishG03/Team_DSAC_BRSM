@@ -1,0 +1,5 @@
+Test,stat,df,p,effect,sig
+Kruskal-Wallis (rank),26.057508214862082,5,8.697322483071083e-05,—,***
+Mann-Whitney (colour),69066.0,—,5.708539820968313e-09,r=0.238,***
+Spearman (trial trend),-0.5178571428571428,—,0.04800407736655833,—,*
+Spearman (rank trend),0.8857142857142858,—,0.01884548104956266,—,*
