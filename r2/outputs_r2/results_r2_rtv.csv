@@ -1,0 +1,5 @@
+Group,Predictor,Outcome,rho,p,sig
+Single,Lab RT SD (variability),Success Rate,-0.29942198764507727,0.18730288573500953,ns
+Single,Lab RT SD (variability),False Alarms,0.3061962407592193,0.17703571792865594,ns
+Multiple,Lab RT SD (variability),Success Rate,-0.4724063089084713,0.06463994323054133,ns
+Multiple,Lab RT SD (variability),False Alarms,0.5139917209011775,0.041677207941541825,*
