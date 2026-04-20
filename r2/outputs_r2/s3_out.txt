@@ -1,0 +1,244 @@
+=================================================================
+STEP 3: t-TESTS, LEVEL TRENDS, CONCURRENT VALIDITY
+=================================================================
+
+─────────────────────────────────────────────────────────────────
+  A. H2/H3 — PAIRED t-TESTS: Game vs Lab RT (within each group)
+─────────────────────────────────────────────────────────────────
+
+  DV: Log RT (primary)
+
+  Single group  (n=21)
+    Lab  logRT:  M=7.3125  SD=0.1261  95%CI[7.2551,7.3699]
+    Game logRT:  M=7.8163  SD=0.1501  95%CI[7.7479,7.8846]
+    Diff:        M=0.5038  SD=0.1417  95%CI[0.4393,0.5683]
+    Paired t(20)=16.2901  p=0.0000***  dz=3.555 [large]
+    Wilcoxon W=0.0  p=0.0000***  (robustness check — diff scores SW p=0.6934)
+    Raw RT diff: M=1392.1 ms  t(20)=12.603  p=0.0000***  dz=2.750
+
+  Multiple group  (n=16)
+    Lab  logRT:  M=7.3200  SD=0.1314  95%CI[7.2500,7.3901]
+    Game logRT:  M=7.4002  SD=0.2056  95%CI[7.2907,7.5098]
+    Diff:        M=0.0802  SD=0.2381  95%CI[-0.0467,0.2071]
+    Paired t(15)=1.3476  p=0.1978ns  dz=0.337 [small]
+    Wilcoxon W=36.0  p=0.1046ns  (robustness check — diff scores SW p=0.2236)
+    Raw RT diff: M=251.4 ms  t(15)=1.823  p=0.0882ns  dz=0.456
+
+─────────────────────────────────────────────────────────────────
+  B. H2 — INDEPENDENT t-TESTS: Single vs Multiple
+─────────────────────────────────────────────────────────────────
+
+  Lab Log RT:
+    Single   M=7.312  SD=0.126  n=21  95%CI[7.255,7.370]
+    Multiple M=7.320  SD=0.131  n=16  95%CI[7.250,7.390]
+    Welch t(35)=-0.176  p=0.8614ns  d=-0.059 [negligible]
+    Mann-Whitney U=171  p=0.9389ns  r=-0.018  (parametric & non-param agree)
+
+  Lab Raw RT (ms):
+    Single   M=1565.410  SD=236.537  n=21  95%CI[1457.740,1673.080]
+    Multiple M=1605.039  SD=273.649  n=16  95%CI[1459.222,1750.857]
+    Welch t(35)=-0.462  p=0.6471ns  d=-0.157 [negligible]
+    Mann-Whitney U=164  p=0.9146ns  r=0.024  (parametric & non-param agree)
+
+  Game Log RT (all levels):
+    Single   M=7.816  SD=0.150  n=21  95%CI[7.748,7.885]
+    Multiple M=7.400  SD=0.206  n=16  95%CI[7.291,7.510]
+    Welch t(35)=6.826  p=0.0000***  d=2.363 [large]
+    Mann-Whitney U=317  p=0.0000***  r=-0.887  (parametric & non-param agree)
+
+  Game Raw RT ms (all levels):
+    Single   M=2957.555  SD=520.820  n=21  95%CI[2720.481,3194.629]
+    Multiple M=1856.456  SD=507.280  n=16  95%CI[1586.145,2126.766]
+    Welch t(35)=6.466  p=0.0000***  d=2.138 [large]
+    Mann-Whitney U=314  p=0.0000***  r=-0.869  (parametric & non-param agree)
+
+  Game Raw RT ms (levels 1–10):
+    Single   M=2264.569  SD=427.943  n=21  95%CI[2069.772,2459.366]
+    Multiple M=1847.149  SD=514.351  n=16  95%CI[1573.071,2121.227]
+    Welch t(35)=2.627  p=0.0136*  d=0.894 [large]
+    Mann-Whitney U=258  p=0.0061**  r=-0.536  (parametric & non-param agree)
+
+  Game Success Rate (%):
+    Single   M=95.787  SD=5.565  n=21  95%CI[93.254,98.320]
+    Multiple M=96.372  SD=2.534  n=16  95%CI[95.022,97.722]
+    Welch t(35)=-0.427  p=0.6726ns  d=-0.129 [negligible]
+    Mann-Whitney U=198  p=0.3593ns  r=-0.179  (parametric & non-param agree)
+
+  Game Hit Rate (%):
+    Single   M=95.861  SD=6.628  n=21  95%CI[92.844,98.878]
+    Multiple M=98.016  SD=2.765  n=16  95%CI[96.543,99.490]
+    Welch t(35)=-1.344  p=0.1895ns  d=-0.405 [small]
+    Mann-Whitney U=187  p=0.5500ns  r=-0.113  (parametric & non-param agree)
+
+  Game False Alarms:
+    Single   M=0.167  SD=0.286  n=21  95%CI[0.037,0.297]
+    Multiple M=0.565  SD=0.459  n=16  95%CI[0.321,0.810]
+    Welch t(35)=-3.054  p=0.0055**  d=-1.078 [large]
+    Mann-Whitney U=69  p=0.0022**  r=0.589  (parametric & non-param agree)
+
+  Game Max Level Reached:
+    Single   M=15.000  SD=0.000  n=21  95%CI[15.000,15.000]
+    Multiple M=10.750  SD=1.342  n=16  95%CI[10.035,11.465]
+    Welch t(35)=12.671  p=0.0000***  d=4.839 [large]
+    Mann-Whitney U=336  p=0.0000***  r=-1.000  (parametric & non-param agree)
+
+  ✔  Saved results_r2_indep_ttests.csv
+
+─────────────────────────────────────────────────────────────────
+  C. H4 — SPEARMAN LEVEL TRENDS: RT and Accuracy ~ Level
+─────────────────────────────────────────────────────────────────
+
+  Single group:
+
+    Window: All levels  (n_obs=351, n_ptpt=21)
+      RT (ms)                       ρ=+0.475  p=0.0000***  β=+261.253/level  ↑ increasing  ✓expected
+      Log RT                        ρ=+0.572  p=0.0000***  β=+0.084/level  ↑ increasing  ✓expected
+      Success Rate (%)              ρ=-0.187  p=0.0004***  β=-0.640/level  ↓ decreasing  ✓expected
+      Hit Rate (%)                  ρ=-0.098  p=0.0666ns  β=-0.516/level  ↓ decreasing  ✓expected
+      False Alarms                  ρ=+0.187  p=0.0004***  β=+0.005/level  ↑ increasing  ✓expected
+      Avg Inter-Target Time (ms)    ρ=+nan  p=nan  β=+0.000/level  ↓ decreasing  ✗expected
+
+    Window: Levels 1–10  (n_obs=230, n_ptpt=21)
+      RT (ms)                       ρ=+0.378  p=0.0000***  β=+176.956/level  ↑ increasing  ✓expected
+      Log RT                        ρ=+0.422  p=0.0000***  β=+0.070/level  ↑ increasing  ✓expected
+      Success Rate (%)              ρ=-0.056  p=0.3974ns  β=-0.190/level  ↓ decreasing  ✓expected
+      Hit Rate (%)                  ρ=-0.050  p=0.4544ns  β=-0.316/level  ↓ decreasing  ✓expected
+      False Alarms                  ρ=+0.056  p=0.3974ns  β=-0.007/level  ↑ increasing  ✓expected
+      Avg Inter-Target Time (ms)    ρ=+nan  p=nan  β=+0.000/level  ↓ decreasing  ✗expected
+
+  Multiple group:
+
+    Window: All levels  (n_obs=195, n_ptpt=16)
+      RT (ms)                       ρ=+0.122  p=0.0896ns  β=-25.108/level  ↑ increasing  ✓expected
+      Log RT                        ρ=+0.122  p=0.0896ns  β=+0.003/level  ↑ increasing  ✓expected
+      Success Rate (%)              ρ=-0.407  p=0.0000***  β=-0.803/level  ↓ decreasing  ✓expected
+      Hit Rate (%)                  ρ=-0.415  p=0.0000***  β=-0.640/level  ↓ decreasing  ✓expected
+      False Alarms                  ρ=+0.438  p=0.0000***  β=+0.165/level  ↑ increasing  ✓expected
+      Avg Inter-Target Time (ms)    ρ=+0.646  p=0.0000***  β=+99.907/level  ↑ increasing  ✓expected
+
+    Window: Levels 1–10  (n_obs=177, n_ptpt=16)
+      RT (ms)                       ρ=+0.182  p=0.0153*  β=-17.079/level  ↑ increasing  ✓expected
+      Log RT                        ρ=+0.182  p=0.0153*  β=+0.010/level  ↑ increasing  ✓expected
+      Success Rate (%)              ρ=-0.345  p=0.0000***  β=-0.516/level  ↓ decreasing  ✓expected
+      Hit Rate (%)                  ρ=-0.460  p=0.0000***  β=-0.799/level  ↓ decreasing  ✓expected
+      False Alarms                  ρ=+0.372  p=0.0000***  β=+0.090/level  ↑ increasing  ✓expected
+      Avg Inter-Target Time (ms)    ρ=+0.625  p=0.0000***  β=+103.689/level  ↑ increasing  ✓expected
+
+  ✔  Saved results_r2_level_trends.csv
+
+─────────────────────────────────────────────────────────────────
+  D. H1 — CONCURRENT VALIDITY: Lab RT vs Game RT
+─────────────────────────────────────────────────────────────────
+
+  Three validity comparisons:
+  (a) Lab RT vs Game RT — all levels
+  (b) Lab RT vs Game RT — levels 1–10 (comparable window)
+  (c) Lab RT vs Level-1 Game RT (most structurally comparable to lab)
+
+  ── (a) All levels ────────────────────────────────────────
+
+    Single  (n=21)
+      Pearson  r (raw RT)  = +0.288  p=0.2055ns  95%CI[-0.164,0.640]
+      Pearson  r (log RT)  = +0.485  p=0.0259*  95%CI[0.067,0.758]
+      Spearman ρ (raw RT)  = +0.396  p=0.0755ns
+
+    Multiple  (n=16)
+      Pearson  r (raw RT)  = +0.101  p=0.7096ns  95%CI[-0.415,0.568]
+      Pearson  r (log RT)  = +0.053  p=0.8451ns  95%CI[-0.455,0.535]
+      Spearman ρ (raw RT)  = +0.026  p=0.9225ns
+
+    All  (n=37)
+      Pearson  r (raw RT)  = +0.077  p=0.6489ns  95%CI[-0.253,0.392]
+      Pearson  r (log RT)  = +0.143  p=0.4001ns  95%CI[-0.190,0.446]
+      Spearman ρ (raw RT)  = +0.182  p=0.2814ns
+
+  ── (b) Lvls 1–10 ────────────────────────────────────────
+
+    Single  (n=21)
+      Pearson  r (raw RT)  = +0.648  p=0.0015**  95%CI[0.300,0.844]
+      Pearson  r (log RT)  = +0.653  p=0.0013**  95%CI[0.307,0.846]
+      Spearman ρ (raw RT)  = +0.452  p=0.0397*
+
+    Multiple  (n=16)
+      Pearson  r (raw RT)  = +0.031  p=0.9104ns  95%CI[-0.472,0.518]
+      Pearson  r (log RT)  = +0.004  p=0.9869ns  95%CI[-0.492,0.499]
+      Spearman ρ (raw RT)  = -0.047  p=0.8626ns
+
+    All  (n=37)
+      Pearson  r (raw RT)  = +0.269  p=0.1077ns  95%CI[-0.060,0.545]
+      Pearson  r (log RT)  = +0.256  p=0.1266ns  95%CI[-0.074,0.535]
+      Spearman ρ (raw RT)  = +0.209  p=0.2142ns
+
+  ── (c) Level 1 only ────────────────────────────────────────
+
+    Single  (n=21)
+      Pearson  r (raw RT)  = +0.717  p=0.0003***  95%CI[0.413,0.877]
+      Pearson  r (log RT)  = +0.606  p=0.0036**  95%CI[0.237,0.823]
+      Spearman ρ (raw RT)  = +0.304  p=0.1805ns
+
+    Multiple  (n=16)
+      Pearson  r (raw RT)  = +0.163  p=0.5465ns  95%CI[-0.362,0.609]
+      Pearson  r (log RT)  = +0.069  p=0.7984ns  95%CI[-0.442,0.546]
+      Spearman ρ (raw RT)  = -0.088  p=0.7452ns
+
+    All  (n=37)
+      Pearson  r (raw RT)  = +0.265  p=0.1131ns  95%CI[-0.065,0.542]
+      Pearson  r (log RT)  = +0.237  p=0.1574ns  95%CI[-0.094,0.521]
+      Spearman ρ (raw RT)  = +0.114  p=0.5029ns
+
+  ── Reliability-Corrected Validity Ceiling ──────────────────
+  (Maximum observable r given Lab reliability from Report 1)
+
+    Single   Lab α=0.744 → √α=0.863 (max observable r if game perfectly reliable)
+    Multiple Lab α=0.621 → √α=0.788 (max observable r if game perfectly reliable)
+    Single     n=21  Minimum r for p<.05: r=0.433
+    Multiple   n=16  Minimum r for p<.05: r=0.497
+    All        n=37  Minimum r for p<.05: r=0.325
+
+  ✔  Saved results_r2_validity.csv
+
+─────────────────────────────────────────────────────────────────
+  E. H_E1 — Search Termination: Red vs White Trial RT (Lab)
+─────────────────────────────────────────────────────────────────
+
+  Single group  (red n=105, white n=210):
+    Red   (target):     M=1388.1  SD=414.4  Mdn=1290.8
+    White (distractor): M=1654.1  SD=584.7  Mdn=1487.6
+    Difference:         M=-266.0 ms  (Red faster ✓)
+    Mann-Whitney U=6761  p=0.0000***  r=0.387
+    Levene (variance equality): W=2.7802  p=0.0964  ✓ equal variance
+    SD ratio (red/white): 0.709
+
+  Multiple group  (red n=80, white n=160):
+    Red   (target):     M=1601.1  SD=1058.8  Mdn=1331.8
+    White (distractor): M=1607.0  SD=523.2  Mdn=1467.5
+    Difference:         M=-5.9 ms  (Red faster ✓)
+    Mann-Whitney U=5053  p=0.0079**  r=0.210
+    Levene (variance equality): W=1.3875  p=0.2400  ✓ equal variance
+    SD ratio (red/white): 2.024
+
+─────────────────────────────────────────────────────────────────
+  F. H_E3 — RT Variability Predicts Game Accuracy
+─────────────────────────────────────────────────────────────────
+
+  Single group (n=21):
+    Lab RT SD (variability)             → Success Rate        ρ=-0.299  p=0.1873ns
+    Lab RT SD (variability)             → False Alarms        ρ=+0.306  p=0.1770ns
+
+  Multiple group (n=16):
+    Lab RT SD (variability)             → Success Rate        ρ=-0.472  p=0.0646ns
+    Lab RT SD (variability)             → False Alarms        ρ=+0.514  p=0.0417*
+
+  ✔  Saved results_r2_rtv.csv
+
+  Generating plots...
+  ✔  fig_s3_01_paired_ttest.png
+  ✔  fig_s3_02_forest_plot.png
+  ✔  fig_s3_03_validity_scatter.png
+  ✔  fig_s3_04_level_trends.png
+
+  ✔  Saved results_r2_paired_ttests.csv
+  ✔  Updated _r2_cache.pkl
+
+  STEP 3 COMPLETE — paste full output before Step 4.
+

@@ -1,0 +1,131 @@
+=================================================================
+STEP 2: ANOVA DIAGNOSTICS + 2×2 MIXED ANOVA
+=================================================================
+
+  Wide-form (all game levels): 37 participants
+  Wide-form (levels 1–10):    37 participants
+  Single: n=21   Multiple: n=16
+
+─────────────────────────────────────────────────────────────────
+A. ANOVA DIAGNOSTICS
+─────────────────────────────────────────────────────────────────
+
+  ── Raw RT ─────────────────────────────────────────
+  1. Shapiro-Wilk normality — each cell (participant-level means):
+     Single     Lab     n=21  W=0.8690  p=0.0092  ✗ non-normal
+     Single     Game    n=21  W=0.9461  p=0.2870  ✓ normal
+     Multiple   Lab     n=16  W=0.8910  p=0.0579  ✓ normal
+     Multiple   Game    n=16  W=0.9262  p=0.2124  ✓ normal
+
+  2. Levene's test (homogeneity of variance — between groups on Lab DV):
+     Levene W=0.7470  p=0.3933  ✓ variances equal
+     Levene (Game) W=0.1638  p=0.6882  ✓ variances equal
+
+  3. Shapiro-Wilk on difference scores (Game − Lab) per group:
+     Single      n=21  diff M=1392.145  W=0.9687  p=0.7036  ✓ normal
+     Multiple    n=16  diff M=251.416  W=0.9705  p=0.8469  ✓ normal
+
+  4. Outlier check (participant means > 3SD from group mean):
+     ⚠  Single Lab: ['1'] flagged
+
+  ── Log RT ─────────────────────────────────────────
+  1. Shapiro-Wilk normality — each cell (participant-level means):
+     Single     Lab     n=21  W=0.9348  p=0.1718  ✓ normal
+     Single     Game    n=21  W=0.9664  p=0.6520  ✓ normal
+     Multiple   Lab     n=16  W=0.9612  p=0.6827  ✓ normal
+     Multiple   Game    n=16  W=0.9536  p=0.5487  ✓ normal
+
+  2. Levene's test (homogeneity of variance — between groups on Lab DV):
+     Levene W=0.3185  p=0.5761  ✓ variances equal
+     Levene (Game) W=0.4751  p=0.4952  ✓ variances equal
+
+  3. Shapiro-Wilk on difference scores (Game − Lab) per group:
+     Single      n=21  diff M=0.504  W=0.9682  p=0.6934  ✓ normal
+     Multiple    n=16  diff M=0.080  W=0.9276  p=0.2236  ✓ normal
+
+  4. Outlier check (participant means > 3SD from group mean):
+     No outliers > 3SD found in any cell.
+
+  Generating diagnostic plots...
+  ✔  fig_s2_01_anova_diagnostics.png
+
+─────────────────────────────────────────────────────────────────
+B. 2×2 MIXED ANOVA
+   Between: Target Load (Single vs Multiple)
+   Within:  Modality (Lab vs Game)
+   DV: Log RT (primary) and Raw RT (reported alongside)
+─────────────────────────────────────────────────────────────────
+
+  ── Log RT (primary) ─────────────────────────────────────────────
+  Source                               SS   df         MS        F        p     η²p sig
+  ────────────────────────────────────────────────────────────────────────────────
+  Target Load [A]                   0.758    1      0.758   25.594   0.0000   0.422 ***
+    Error S/A                       1.036   35      0.030        —        —       — 
+  Modality [B]                      1.902    1      1.902   46.202   0.0000   0.569 ***
+  Load×Modality [AB]                0.815    1      0.815   19.793   0.0001   0.361 ***
+    Error BxS/A                     1.441   35      0.041        —        —       — 
+
+  ➤ Target Load:    F(1,35)=25.594  p=0.0000***  η²p=0.422 [large]
+  ➤ Modality:       F(1,35)=46.202  p=0.0000***  η²p=0.569 [large]
+  ➤ Interaction:    F(1,35)=19.793  p=0.0001***  η²p=0.361 [large]
+
+  ── Raw RT (supplementary) ─────────────────────────────────────────────
+  Source                               SS   df         MS        F        p     η²p sig
+  ────────────────────────────────────────────────────────────────────────────────
+  Target Load [A]              5115910.064    1 5115910.064   26.790   0.0000   0.434 ***
+    Error S/A                  6683631.338   35 190960.895        —        —       — 
+  Modality [B]                 14946954.180    1 14946954.180   48.655   0.0000   0.582 ***
+  Load×Modality [AB]           5908431.406    1 5908431.406   19.233   0.0001   0.355 ***
+    Error BxS/A                10752106.327   35 307203.038        —        —       — 
+
+  ➤ Target Load:    F(1,35)=26.790  p=0.0000***  η²p=0.434 [large]
+  ➤ Modality:       F(1,35)=48.655  p=0.0000***  η²p=0.582 [large]
+  ➤ Interaction:    F(1,35)=19.233  p=0.0001***  η²p=0.355 [large]
+
+  ── Comparable Window (Levels 1–10) — Log RT ─────────────
+
+  ── Log RT — Levels 1–10 ─────────────────────────────────────────────
+  Source                               SS   df         MS        F        p     η²p sig
+  ────────────────────────────────────────────────────────────────────────────────
+  Target Load [A]                   0.181    1      0.181    5.743   0.0220   0.141 *
+    Error S/A                       1.101   35      0.031        —        —       — 
+  Modality [B]                      0.717    1      0.717   31.212   0.0000   0.471 ***
+  Load×Modality [AB]                0.209    1      0.209    9.097   0.0047   0.206 **
+    Error BxS/A                     0.804   35      0.023        —        —       — 
+
+  ➤ Target Load:    F(1,35)=5.743  p=0.0220*  η²p=0.141 [large]
+  ➤ Modality:       F(1,35)=31.212  p=0.0000***  η²p=0.471 [large]
+  ➤ Interaction:    F(1,35)=9.097  p=0.0047**  η²p=0.206 [large]
+
+  Generating interaction plots...
+  ✔  fig_s2_02_anova_interaction.png
+  ✔  fig_s2_03_individual_trajectories.png
+
+─────────────────────────────────────────────────────────────────
+C. ANOVA ASSUMPTION SUMMARY FOR REPORT
+─────────────────────────────────────────────────────────────────
+
+  Sphericity:
+    2-level within-subjects factor (Lab/Game) — sphericity is
+    automatically satisfied (Mauchly's test not needed). No correction required.
+
+  Normality:
+    Participant-level log RT means are examined above (Shapiro-Wilk).
+    Note: ANOVA is robust to moderate non-normality at n=21 and n=16
+    (Central Limit Theorem applies to means). We report both standard
+    ANOVA and note if robust alternatives are warranted.
+
+  Homogeneity of variance:
+    Levene's test reported above for each DV.
+    If violated, Welch correction is applied to between-subjects F.
+
+  Independence:
+    Random group assignment + counterbalanced modality order.
+    No repeated between-group observations.
+
+
+  ✔  Saved results_r2_anova.csv
+  ✔  Updated _r2_cache.pkl
+
+  STEP 2 COMPLETE — paste output before running Step 3.
+
