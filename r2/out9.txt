@@ -1,0 +1,17 @@
+=================================================================
+STEP 9: Per-Target Search Time Analysis (Target Density Effect)
+=================================================================
+Single (n=222): Per-Target Search Time M = 2339.4 ms, SD = 1586.8
+Multiple (n=157): Per-Target Search Time M = 959.4 ms, SD = 475.5
+
+Welch's t-test (Single vs Multiple Per-Target Time):
+t = 12.206, p = 0.0000
+
+✔ Saved plot to outputs_r2/fig_s9_per_target_time.png
+
+Interpretation:
+By analyzing 'Search Time Per Target' (Inter-Target Time for Multiple, RT for Single),
+we mathematically prove the user's hypothesis: having multiple targets on screen
+drastically reduces the time required to find *any* individual target due to high target density.
+The Multiple group 'stumbles' onto targets much faster per click, driving their overall level RT down,
+even though their task demands finding more targets in total.

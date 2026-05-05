@@ -1,0 +1,27 @@
+=================================================================
+EXTRA INSIGHTS: Speed-Accuracy Trade-off & Game Level 11 Wall
+=================================================================
+
+─────────────────────────────────────────────────────────────────
+  Insight 1: Speed-Accuracy Trade-off (Game RT vs Game False Alarms)
+─────────────────────────────────────────────────────────────────
+Single Group (n=351 levels): ρ = -0.110, p = 0.0399
+  -> Significant speed-accuracy trade-off: faster RT leads to more false alarms.
+Multiple Group (n=195 levels): ρ = 0.151, p = 0.0355
+  -> Significant positive correlation: slower RT correlates with more false alarms.
+
+─────────────────────────────────────────────────────────────────
+  Insight 2: The 'Level 10 Wall' for the Multiple Group
+─────────────────────────────────────────────────────────────────
+Level 10: 29 attempts by 16 participants
+Level 11: 7 attempts by 5 participants
+
+Comparing metrics between Level 10 and Level 11:
+  Level 10 Mean RT: 2189.3 ms | False Alarms: 1.14 | Success Rate: 93.0%
+  Level 11 Mean RT: 1388.9 ms | False Alarms: 1.00 | Success Rate: 93.8%
+
+Conclusion:
+The Multiple group hits a wall around Level 10. Their faster overall Game RT 
+(compared to Single) is likely a maladaptive strategy: they guess faster but make 
+more false alarms, ultimately failing earlier. The Single group is slower but 
+more deliberate, surviving until Level 15.

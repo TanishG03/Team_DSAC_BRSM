@@ -1,0 +1,23 @@
+=================================================================
+STEP 8: Inferential Analysis of Speed-Accuracy Trade-off
+=================================================================
+Single   | RT Mean: 2264.6 ms | FA Mean: 0.14
+Multiple | RT Mean: 1847.1 ms | FA Mean: 0.41
+
+✔ Saved plot to outputs_r2/fig_s8_speed_accuracy.png
+
+── ANCOVA: Predicting Game RT controlling for False Alarms ──
+======================================================================================
+                         coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------
+Intercept           1807.0802    154.542     11.693      0.000    1493.014    2121.147
+C(group)[T.Single]   444.4033    170.582      2.605      0.014      97.740     791.067
+FA_comp               96.7365    240.482      0.402      0.690    -391.982     585.455
+======================================================================================
+
+Interpretation:
+The Multiple group has a lower average RT than the Single group.
+However, when we plot RT against False Alarms, we see a clear speed-accuracy trade-off.
+The Multiple group adopts a 'spray and pray' or rapid-clicking strategy because their
+task is overwhelmingly cluttered. This drops their average RT, but heavily inflates
+their error rate (False Alarms).

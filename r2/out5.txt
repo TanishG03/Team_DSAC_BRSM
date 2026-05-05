@@ -1,0 +1,114 @@
+=================================================================
+STEP 5: EXPLORATORY HYPOTHESES H_E2 AND H_E4
+=================================================================
+
+─────────────────────────────────────────────────────────────────
+  H_E2 — ICI Slowing Across Click Rank (Multiple Lab)
+─────────────────────────────────────────────────────────────────
+
+  Hypothesis: ICI increases significantly across click-pair ranks
+  (1→2 < 2→3 < 3→4 < 4→5), consistent with FIT serial search.
+  ICI shorter on red (target-present) vs white (distractor) trials.
+
+  ICI observations (all ranks) : 904
+  ICI observations (ranks 1–4) : 901  (excluded 3 extra-click artefacts)
+  Participants:                  16
+  Click ranks analysed:          [1, 2, 3, 4]
+
+  ICI Descriptives by Click-Pair Rank:
+  Rank          n     M (ms)       SD      Mdn
+  ─────────────────────────────────────────────
+  1→2         232     1222.3    569.4   1071.1
+  2→3         231     1204.0    596.2   1043.6
+  3→4         227     1305.8    730.9   1101.5
+  4→5         211     1433.9   1045.2   1170.1
+
+  ── Kruskal-Wallis Test (ICI ~ Click Rank) ───────────────────
+
+  H(3, N=901) = 20.149  p = 0.0002***
+  ε² (effect size) = 0.020  (small)
+
+  ── Dunn's Post-Hoc (Bonferroni correction) ──────────────────
+
+  Dunn p-values (Bonferroni-corrected):
+  Rows/Cols = Click rank (1=1→2, 2=2→3, 3=3→4, 4=4→5)
+        1       2       3       4
+1  1.0000  1.0000  1.0000  0.0044
+2  1.0000  1.0000  0.1581  0.0002
+3  1.0000  0.1581  1.0000  0.2580
+4  0.0044  0.0002  0.2580  1.0000
+
+  Adjacent-rank comparisons:
+    Rank 1→2: M=1222.3 → M=1204.0  MW U=28080  p(one-tail)=0.8139ns  r=-0.048  ✗ decreasing
+    Rank 2→3: M=1204.0 → M=1305.8  MW U=22992  p(one-tail)=0.0114*  r=0.123  ✓ increasing
+    Rank 3→4: M=1305.8 → M=1433.9  MW U=21166  p(one-tail)=0.0178*  r=0.116  ✓ increasing
+
+  ── Red vs White ICI (Mann-Whitney U) ────────────────────────
+
+  Red   (target present): n=298  M=1131.3  SD=443.4  Mdn=1033.2
+  White (distractor):     n=603  M=1365.7  SD=859.4  Mdn=1137.0
+  Difference:  M=-234.5 ms  (Red faster ✓)
+  Mann-Whitney U=67981  p=0.0000***  r=0.243
+  Levene (variance): W=10.8736  p=0.0010  ✗ unequal variance
+  SD ratio (red/white): 0.516
+
+─────────────────────────────────────────────────────────────────
+  H_E4 — Accuracy Ceiling Limits Validity
+─────────────────────────────────────────────────────────────────
+
+  Hypothesis: Because Game SR and HR are ceiling-constrained (Mdn=100%),
+  they will show weaker concurrent validity with Lab RT than Game RT does.
+  False Alarms (not ceiling-constrained) may be more discriminating.
+
+  ── Accuracy Metric Variance (ceiling evidence) ──────────────
+
+  Metric               Group            M      SD     Mdn   % at ceiling    skew
+  ────────────────────────────────────────────────────────────────────────
+  Success Rate         Single       95.79    5.56    96.9           42.9%  -1.421
+  Hit Rate             Single       95.86    6.63   100.0           61.9%  -1.507
+  False Alarms         Single        0.17    0.29     0.1           42.9%   2.025
+  Success Rate         Multiple     96.37    2.53    96.3           12.5%  -0.248
+  Hit Rate             Multiple     98.02    2.76    98.4           25.0%  -2.964
+  False Alarms         Multiple      0.57    0.46     0.5           12.5%   0.839
+
+  ── Concurrent Validity: Lab RT vs Game Accuracy Metrics ─────
+  (Compare these r values to Lab RT vs Game RT validity above)
+
+  Criterion              Group         n        r         p    sig               95%CI  interpretation
+  ─────────────────────────────────────────────────────────────────────────────────────
+  Game RT (raw)          Single       21   +0.288    0.2055     ns  [-0.164,+0.640]  small
+  Game RT (log)          Single       21   +0.485    0.0259      *  [+0.067,+0.758]  medium
+  Success Rate           Single       21   -0.002    0.9942     ns  [-0.433,+0.430]  negligible
+  Hit Rate               Single       21   -0.021    0.9277     ns  [-0.449,+0.414]  negligible
+  False Alarms           Single       21   -0.027    0.9078     ns  [-0.453,+0.410]  negligible
+
+  Game RT (raw)          Multiple     16   +0.101    0.7096     ns  [-0.415,+0.568]  small
+  Game RT (log)          Multiple     16   +0.053    0.8451     ns  [-0.455,+0.535]  negligible
+  Success Rate           Multiple     16   -0.381    0.1457     ns  [-0.737,+0.142]  medium
+  Hit Rate               Multiple     16   -0.378    0.1489     ns  [-0.736,+0.145]  medium
+  False Alarms           Multiple     16   +0.449    0.0809     ns  [-0.060,+0.773]  medium
+
+  ── R² Comparison (variance explained in Lab RT) ─────────────
+
+  Criterion                 Single r²    Multiple r²
+  ────────────────────────────────────────────────────
+  Game RT (raw)                0.0829         0.0102
+  Game RT (log)                0.2350         0.0028
+  Success Rate                 0.0000         0.1450
+  Hit Rate                     0.0004         0.1429
+  False Alarms                 0.0007         0.2018
+
+─────────────────────────────────────────────────────────────────
+  PLOTS
+─────────────────────────────────────────────────────────────────
+  ✔  fig_s5_01_ici_rank.png
+  ✔  fig_s5_02_ici_red_white.png
+  ✔  fig_s5_03_he4_validity_comparison.png
+  ✔  fig_s5_04_accuracy_ceiling.png
+
+  ✔  Saved results_r2_he2_ici.csv
+  ✔  Saved results_r2_he4_validity.csv
+  ✔  Updated _r2_cache.pkl
+
+  STEP 5 COMPLETE — paste full output before Step 6 (write-up).
+
